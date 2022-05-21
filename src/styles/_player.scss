@@ -1,0 +1,79 @@
+.player {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 20vh;
+}
+
+.time-control {
+  align-items: center;
+  display: flex;
+  width: 50%;
+  input {
+    // padding: 1rem 0rem;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    width: 100%;
+  }
+  p {
+    padding: 0rem 1rem;
+  }
+}
+
+.play-control {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 30%;
+  svg {
+    cursor: pointer;
+  }
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+}
+
+.track {
+  background: lightblue;
+  border-radius: 1rem;
+  height: 1rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.animate-track {
+  background: rgb(204, 204, 204);
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translateX(0%);
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .time-control {
+    width: 90%;
+  }
+  .play-control {
+    width: 60%;
+  }
+}
